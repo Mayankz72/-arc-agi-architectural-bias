@@ -1,0 +1,69 @@
+=== Environment check ===
+Python: 3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]
+PyTorch: 2.10.0+cu128
+CUDA available: True
+Device: Tesla T4
+VRAM (GB): 15.6
+
+=== Installing mamba-ssm ===
+0 in /usr/local/lib/python3.12/dist-packages (from rich>=12.3.0->typer->huggingface-hub<2.0,>=1.3.0->transformers->mamba-ssm) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=12.3.0->typer->huggingface-hub<2.0,>=1.3.0->transformers->mamba-ssm) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=12.3.0->typer->huggingface-hub<2.0,>=1.3.0->transformers->mamba-ssm) (0.1.2)
+Downloading tilelang-0.1.8-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (43.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.5/43.5 MB 45.7 MB/s eta 0:00:00
+Downloading apache_tvm_ffi-0.1.9-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 79.3 MB/s eta 0:00:00
+Downloading quack_kernels-0.6.4-py3-none-any.whl (728 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 728.5/728.5 kB 44.2 MB/s eta 0:00:00
+Downloading nvidia_cutlass_dsl-4.6.2-py3-none-any.whl (10 kB)
+Downloading nvidia_cutlass_dsl_libs_base-4.6.2-cp312-cp312-manylinux_2_28_x86_64.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 90.3 MB/s eta 0:00:00
+Downloading nvidia_cutlass_dsl_libs_cu12-4.6.2-cp312-cp312-manylinux_2_28_x86_64.whl (88.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.5/88.5 MB 21.6 MB/s eta 0:00:00
+Downloading nvidia_cutlass_dsl_libs_core-4.6.2-py3-none-any.whl (772 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 772.4/772.4 kB 31.4 MB/s eta 0:00:00
+Downloading z3_solver-4.15.4.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.3/29.3 MB 63.7 MB/s eta 0:00:00
+Downloading torch_c_dlpack_ext-0.1.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (897 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.8/897.8 kB 45.6 MB/s eta 0:00:00
+Downloading nvidia_cuda_nvdisasm-13.3.73-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 102.8 MB/s eta 0:00:00
+Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.4/323.4 kB 17.9 MB/s eta 0:00:00
+Building wheels for collected packages: mamba-ssm, causal-conv1d
+  Building wheel for mamba-ssm (pyproject.toml): started
+  Building wheel for mamba-ssm (pyproject.toml): finished with status 'done'
+  Created wheel for mamba-ssm: filename=mamba_ssm-2.3.2.post1-cp312-cp312-linux_x86_64.whl size=322288410 sha256=7a67070c1e7e99c95abd1319623f044e8a1b3fb46f774bfdea949f0a4fc79638
+  Stored in directory: /root/.cache/pip/wheels/da/67/03/99148d6eeaa4ec2855d71295ac83bcbc8ba7b41a2982992c63
+  Building wheel for causal-conv1d (pyproject.toml): started
+  Building wheel for causal-conv1d (pyproject.toml): finished with status 'done'
+  Created wheel for causal-conv1d: filename=causal_conv1d-1.7.0-cp312-cp312-linux_x86_64.whl size=196558813 sha256=8e81f8c76435ad31aa41edc6c0c9d26de971a293b190183d2816da71547614d7
+  Stored in directory: /root/.cache/pip/wheels/6f/0b/1b/e063b1e314a5ff0783e450525921cb8f5c48fbb03639bad6ba
+Successfully built mamba-ssm causal-conv1d
+Installing collected packages: z3-solver, protobuf, nvidia-cuda-nvdisasm, apache-tvm-ffi, nvidia-cutlass-dsl-libs-core, torch-c-dlpack-ext, nvidia-cutlass-dsl-libs-base, causal-conv1d, tilelang, nvidia-cutlass-dsl-libs-cu12, nvidia-cutlass-dsl, quack-kernels, mamba-ssm
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 5.29.5
+    Uninstalling protobuf-5.29.5:
+      Successfully uninstalled protobuf-5.29.5
+Successfully installed apache-tvm-ffi-0.1.9 causal-conv1d-1.7.0 mamba-ssm-2.3.2.post1 nvidia-cuda-nvdisasm-13.3.73 nvidia-cutlass-dsl-4.6.2 nvidia-cutlass-dsl-libs-base-4.6.2 nvidia-cutlass-dsl-libs-core-4.6.2 nvidia-cutlass-dsl-libs-cu12-4.6.2 protobuf-6.33.6 quack-kernels-0.6.4 tilelang-0.1.8 torch-c-dlpack-ext-0.1.5 z3-solver-4.15.4.0
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+bigframes 2.39.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+grpcio-tools 1.71.2 requires protobuf<6.0dev,>=5.26.1, but you have protobuf 6.33.6 which is incompatible.
+google-ai-generativelanguage 0.6.15 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.2, but you have protobuf 6.33.6 which is incompatible.
+grpcio-status 1.71.2 requires protobuf<6.0dev,>=5.26.1, but you have protobuf 6.33.6 which is incompatible.
+
+
+=== Importing mamba-ssm ===
+mamba-ssm works. Output shape: torch.Size([2, 10, 64])
+
+=== ARC-AGI-2 data check ===
+/kaggle/input contents: ['competitions']
+Competition data not attached at /kaggle/input/arc-prize-2026-arc-agi-2
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 281531 bytes to __results__.html

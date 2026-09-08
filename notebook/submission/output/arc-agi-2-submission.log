@@ -1,0 +1,46 @@
+[{"stream_name":"stdout","time":6.631999936,"data":"/kaggle/input contents: ['datasets', 'competitions']\n"}
+,{"stream_name":"stdout","time":6.683471007,"data":"Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared\n"}
+,{"stream_name":"stdout","time":6.684245313,"data":"Using COMPETITION_ROOT: /kaggle/input/competitions/arc-prize-2026-arc-agi-2 contents: ['arc-agi_training_solutions.json', 'arc-agi_evaluation_solutions.json', 'arc-agi_evaluation_challenges.json', 'sample_submission.json', 'arc-agi_training_challenges.json', 'arc-agi_test_challenges.json']\n"}
+,{"stream_name":"stdout","time":7.008639934,"data":"Device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":7.338027497,"data":"SMOKE_TEST = False\n"}
+,{"stream_name":"stdout","time":7.338065653,"data":"real data loaded: 1000 training, 120 public-eval, 240 blind-test tasks\n"}
+,{"stream_name":"stdout","time":7.509083312,"data":"build_training_examples: kept 4298, dropped 10 oversized (\u003e 8192 tokens)\n"}
+,{"stream_name":"stdout","time":7.509118534,"data":"built 4298 leave-one-out training examples\n"}
+,{"stream_name":"stdout","time":13.043369202,"data":"training Transformer (795,520 params) on 4298 examples, 538 steps/epoch, max_train_seconds=21600\n"}
+,{"stream_name":"stdout","time":1229.018620533,"data":"  epoch 4: t=1120s loss 0.8638 lr 1.00e-03 quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2222.099847407,"data":"  epoch 8: t=2126s loss 0.7623 lr 1.00e-03 quickcheck_cell_acc 0.018\n"}
+,{"stream_name":"stdout","time":3214.437802448,"data":"  epoch 12: t=3115s loss 0.7072 lr 1.00e-03 quickcheck_cell_acc 0.003\n"}
+,{"stream_name":"stdout","time":4184.789846514,"data":"  epoch 16: t=4101s loss 0.6683 lr 1.00e-03 quickcheck_cell_acc 0.010\n"}
+,{"stream_name":"stdout","time":5156.073050376,"data":"  epoch 20: t=5073s loss 0.6282 lr 1.00e-03 quickcheck_cell_acc 0.016\n"}
+,{"stream_name":"stdout","time":6124.868445909,"data":"  epoch 24: t=6050s loss 0.5800 lr 1.00e-03 quickcheck_cell_acc 0.019\n"}
+,{"stream_name":"stdout","time":7102.289938325,"data":"  epoch 28: t=7013s loss 0.5322 lr 1.00e-03 quickcheck_cell_acc 0.021\n"}
+,{"stream_name":"stdout","time":8078.612609444,"data":"  epoch 32: t=7994s loss 0.4921 lr 1.00e-03 quickcheck_cell_acc 0.021\n"}
+,{"stream_name":"stdout","time":9049.417819362,"data":"  epoch 36: t=8975s loss 0.4584 lr 1.00e-03 quickcheck_cell_acc 0.026\n"}
+,{"stream_name":"stdout","time":10017.061449461,"data":"  epoch 40: t=9941s loss 0.4208 lr 1.00e-03 quickcheck_cell_acc 0.028\n"}
+,{"stream_name":"stdout","time":10984.906142614,"data":"  epoch 44: t=10907s loss 0.3865 lr 1.00e-03 quickcheck_cell_acc 0.027\n"}
+,{"stream_name":"stdout","time":11949.257057626,"data":"  epoch 48: t=11869s loss 0.3637 lr 1.00e-03 quickcheck_cell_acc 0.026\n"}
+,{"stream_name":"stdout","time":12902.585212057,"data":"  epoch 52: t=12839s loss 0.3421 lr 1.00e-03 quickcheck_cell_acc 0.025\n"}
+,{"stream_name":"stdout","time":13860.83285293,"data":"  epoch 56: t=13796s loss 0.3235 lr 1.00e-03 quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":14818.571675248,"data":"  epoch 60: t=14752s loss 0.3063 lr 1.00e-03 quickcheck_cell_acc 0.022\n"}
+,{"stream_name":"stdout","time":15759.085351195,"data":"  epoch 64: t=15702s loss 0.2959 lr 1.00e-03 quickcheck_cell_acc 0.025\n"}
+,{"stream_name":"stdout","time":16708.495374409,"data":"  epoch 68: t=16651s loss 0.2768 lr 1.00e-03 quickcheck_cell_acc 0.022\n"}
+,{"stream_name":"stdout","time":17657.922376747,"data":"  epoch 72: t=17610s loss 0.2683 lr 1.00e-03 quickcheck_cell_acc 0.059\n"}
+,{"stream_name":"stdout","time":18611.314260011,"data":"  epoch 76: t=18546s loss 0.2580 lr 1.00e-03 quickcheck_cell_acc 0.088\n"}
+,{"stream_name":"stdout","time":19561.240727759,"data":"  epoch 80: t=19505s loss 0.2497 lr 1.00e-03 quickcheck_cell_acc 0.047\n"}
+,{"stream_name":"stdout","time":20508.206885679,"data":"  epoch 84: t=20447s loss 0.2439 lr 1.00e-03 quickcheck_cell_acc 0.055\n"}
+,{"stream_name":"stdout","time":21458.439044178,"data":"  epoch 88: t=21399s loss 0.2320 lr 1.00e-03 quickcheck_cell_acc 0.054\n"}
+,{"stream_name":"stdout","time":21740.836643513,"data":"  epoch 89: t=21670s loss 0.2343 lr 1.00e-03 quickcheck_cell_acc 0.048\n"}
+,{"stream_name":"stdout","time":21740.836712023,"data":"  stopping: max_train_seconds (21600s) reached at epoch 90\n"}
+,{"stream_name":"stdout","time":21740.83672091,"data":"  best checkpoint: epoch 76 (quickcheck_cell_acc 0.088), total epochs run: 90\n"}
+,{"stream_name":"stdout","time":21953.81626104,"data":"  generation failed for a task (Expected size for first two dimensions of batch2 tensor to be: [4, 9344] but got: [4, 9345].); falling back to a 1x1 placeholder\n"}
+,{"stream_name":"stdout","time":22083.708218088,"data":"public-eval sanity check: exact_match=0.000 over 120 tasks (not part of the submission)\n"}
+,{"stream_name":"stdout","time":22362.443836561,"data":"submission.json validated OK: 2 symbolic, 174 neural, 83 fallback (of 259 total test outputs)\n"}
+,{"stream_name":"stdout","time":22362.472201005,"data":"\n"}
+,{"stream_name":"stdout","time":22362.472219114,"data":"total time: 22355.4s\n"}
+,{"stream_name":"stderr","time":22367.01097162,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":22367.011040716,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":22367.307939931,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":22367.307968936,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":22368.063255772,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":22369.376048426,"data":"[NbConvertApp] Writing 395427 bytes to __results__.html\n"}
+]

@@ -1,0 +1,60 @@
+[{"stream_name":"stdout","time":1.010644038,"data":"Installing mamba-ssm...\n"}
+,{"stream_name":"stdout","time":48.873148931,"data":"mamba-ssm installed OK\n"}
+,{"stream_name":"stdout","time":50.488472206,"data":"/kaggle/input contents: ['datasets', 'competitions']\n"}
+,{"stream_name":"stdout","time":50.547784913,"data":"Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared\n"}
+,{"stream_name":"stdout","time":50.548364008,"data":"Using COMPETITION_ROOT: /kaggle/input/competitions/arc-prize-2026-arc-agi-2 contents: ['arc-agi_training_solutions.json', 'arc-agi_evaluation_solutions.json', 'arc-agi_evaluation_challenges.json', 'sample_submission.json', 'arc-agi_training_challenges.json', 'arc-agi_test_challenges.json']\n"}
+,{"stream_name":"stdout","time":74.968934847,"data":"Device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":75.324713871,"data":"real data loaded: 1000 training tasks, 120 evaluation tasks\n"}
+,{"stream_name":"stdout","time":75.324749588,"data":"SMOKE_TEST = False\n"}
+,{"stream_name":"stdout","time":75.330423199,"data":"after FILTER_CAP=4096 eval filtering: 96/120 evaluation tasks kept (80.0%)\n"}
+,{"stream_name":"stdout","time":75.697638977,"data":"build_training_examples: kept 4026, dropped 282 oversized (\u003e 4096 tokens)\n"}
+,{"stream_name":"stdout","time":75.697702513,"data":"built 4026 leave-one-out training examples (from all 1000 raw training tasks, oversized examples dropped individually)\n"}
+,{"stream_name":"stdout","time":75.697710939,"data":"\n"}
+,{"stream_name":"stdout","time":75.697716421,"data":"=== symbolic_only sanity check on filtered real eval set (shared across architectures) ===\n"}
+,{"stream_name":"stdout","time":81.837855017,"data":"symbolic_only (no neural model): 0/139 exact matches on filtered real eval set\n"}
+,{"stream_name":"stdout","time":81.939765908,"data":"reference (transformer, 4 layers): 795,520 params\n"}
+,{"stream_name":"stdout","time":82.643608425,"data":"mamba: 2 layers -\u003e 1,022,336 params (target 795,520)\n"}
+,{"stream_name":"stdout","time":83.358388994,"data":"hybrid: 2 layers -\u003e 1,103,872 params (target 795,520)\n"}
+,{"stream_name":"stdout","time":83.710951585,"data":"\n"}
+,{"stream_name":"stdout","time":83.710985658,"data":"=== training mamba (1,022,336 params) on 4026 examples ===\n"}
+,{"stream_name":"stdout","time":158.366072637,"data":"  epoch 0: loss 17.6753  lr 5.00e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":343.336361185,"data":"  epoch 5: loss 0.9100  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":504.401134303,"data":"  epoch 10: loss 0.7280  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":664.362264414,"data":"  epoch 15: loss 0.6347  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":824.920261901,"data":"  epoch 20: loss 0.5712  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":987.22387903,"data":"  epoch 25: loss 0.5176  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":1150.970304857,"data":"  epoch 30: loss 0.4735  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":1312.482884136,"data":"  epoch 35: loss 0.4290  lr 1.00e-03  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":1447.37946543,"data":"  epoch 39: loss 0.3960  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1447.379521699,"data":"  best checkpoint: epoch 35 (quickcheck_cell_acc 0.023)\n"}
+,{"stream_name":"stdout","time":1566.10947364,"data":"[mamba] real-eval (baseline): exact_match=0.000 mean_cell_acc=0.047 shape_match_rate=0.072\n"}
+,{"stream_name":"stdout","time":1693.473888232,"data":"[mamba] real-eval (with_verifier): exact_match=0.000 mean_cell_acc=0.047 shape_match_rate=0.072\n"}
+,{"stream_name":"stdout","time":1693.490104174,"data":"\n"}
+,{"stream_name":"stdout","time":1693.490155827,"data":"=== training hybrid (1,103,872 params) on 4026 examples ===\n"}
+,{"stream_name":"stdout","time":1793.744533955,"data":"  epoch 0: loss 13.1733  lr 5.00e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2091.390266512,"data":"  epoch 5: loss 0.8138  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2370.331362265,"data":"  epoch 10: loss 0.6455  lr 1.00e-03  quickcheck_cell_acc 0.004\n"}
+,{"stream_name":"stdout","time":2658.245527519,"data":"  epoch 15: loss 0.5609  lr 1.00e-03  quickcheck_cell_acc 0.018\n"}
+,{"stream_name":"stdout","time":2940.315591868,"data":"  epoch 20: loss 0.4971  lr 1.00e-03  quickcheck_cell_acc 0.017\n"}
+,{"stream_name":"stdout","time":3215.153461877,"data":"  epoch 25: loss 0.4499  lr 1.00e-03  quickcheck_cell_acc 0.019\n"}
+,{"stream_name":"stdout","time":3494.65656604,"data":"  epoch 30: loss 0.4014  lr 1.00e-03  quickcheck_cell_acc 0.026\n"}
+,{"stream_name":"stdout","time":3768.420907755,"data":"  epoch 35: loss 0.3637  lr 1.00e-03  quickcheck_cell_acc 0.025\n"}
+,{"stream_name":"stdout","time":3992.973698425,"data":"  epoch 39: loss 0.3341  lr 1.00e-03  quickcheck_cell_acc 0.031\n"}
+,{"stream_name":"stdout","time":3992.975888641,"data":"  best checkpoint: epoch 39 (quickcheck_cell_acc 0.031)\n"}
+,{"stream_name":"stdout","time":4090.614130977,"data":"[hybrid] real-eval (baseline): exact_match=0.000 mean_cell_acc=0.044 shape_match_rate=0.065\n"}
+,{"stream_name":"stdout","time":4190.56629849,"data":"[hybrid] real-eval (with_verifier): exact_match=0.000 mean_cell_acc=0.044 shape_match_rate=0.065\n"}
+,{"stream_name":"stdout","time":4190.566522737,"data":"\n"}
+,{"stream_name":"stdout","time":4190.566536443,"data":"=== SUMMARY (real ARC-AGI-2, filtered eval subset) ===\n"}
+,{"stream_name":"stdout","time":4190.566542999,"data":"filtered eval coverage: 96/120 tasks (80.0%)\n"}
+,{"stream_name":"stdout","time":4190.566548053,"data":"symbolic_only: 0/139 exact matches\n"}
+,{"stream_name":"stdout","time":4190.566552723,"data":"mamba: params=1,022,336 baseline(exact=0.000 cell=0.047 shape=0.072) with_verifier(exact=0.000 cell=0.047 shape=0.072)\n"}
+,{"stream_name":"stdout","time":4190.566557854,"data":"hybrid: params=1,103,872 baseline(exact=0.000 cell=0.044 shape=0.065) with_verifier(exact=0.000 cell=0.044 shape=0.065)\n"}
+,{"stream_name":"stdout","time":4190.567033058,"data":"\n"}
+,{"stream_name":"stdout","time":4190.567044069,"data":"total time: 4115.6s\n"}
+,{"stream_name":"stderr","time":4194.623453562,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4194.62352163,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4194.907410801,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4194.907453053,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4195.717874362,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4197.215637931,"data":"[NbConvertApp] Writing 428771 bytes to __results__.html\n"}
+]

@@ -1,0 +1,59 @@
+Installing mamba-ssm...
+mamba-ssm installed OK
+/kaggle/input contents: ['datasets', 'competitions']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared
+Using COMPETITION_ROOT: /kaggle/input/competitions/arc-prize-2026-arc-agi-2 contents: ['arc-agi_training_solutions.json', 'arc-agi_evaluation_solutions.json', 'arc-agi_evaluation_challenges.json', 'sample_submission.json', 'arc-agi_training_challenges.json', 'arc-agi_test_challenges.json']
+Device: cuda Tesla T4
+real data loaded: 1000 training tasks, 120 evaluation tasks
+SMOKE_TEST = False
+after FILTER_CAP=4096 eval filtering: 96/120 evaluation tasks kept (80.0%)
+build_training_examples: kept 4026, dropped 282 oversized (> 4096 tokens)
+built 4026 leave-one-out training examples (from all 1000 raw training tasks, oversized examples dropped individually)
+
+=== symbolic_only sanity check on filtered real eval set (shared across architectures) ===
+symbolic_only (no neural model): 0/139 exact matches on filtered real eval set
+reference (transformer, 4 layers): 795,520 params
+mamba: 2 layers -> 1,022,336 params (target 795,520)
+hybrid: 2 layers -> 1,103,872 params (target 795,520)
+
+=== training mamba (1,022,336 params) on 4026 examples ===
+  epoch 0: loss 17.6753  lr 5.00e-04  quickcheck_cell_acc 0.000
+  epoch 5: loss 0.9100  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 10: loss 0.7280  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 15: loss 0.6347  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 20: loss 0.5712  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 25: loss 0.5176  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 30: loss 0.4735  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 35: loss 0.4290  lr 1.00e-03  quickcheck_cell_acc 0.023
+  epoch 39: loss 0.3960  lr 1.00e-03  quickcheck_cell_acc 0.000
+  best checkpoint: epoch 35 (quickcheck_cell_acc 0.023)
+[mamba] real-eval (baseline): exact_match=0.000 mean_cell_acc=0.047 shape_match_rate=0.072
+[mamba] real-eval (with_verifier): exact_match=0.000 mean_cell_acc=0.047 shape_match_rate=0.072
+
+=== training hybrid (1,103,872 params) on 4026 examples ===
+  epoch 0: loss 13.1733  lr 5.00e-04  quickcheck_cell_acc 0.000
+  epoch 5: loss 0.8138  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 10: loss 0.6455  lr 1.00e-03  quickcheck_cell_acc 0.004
+  epoch 15: loss 0.5609  lr 1.00e-03  quickcheck_cell_acc 0.018
+  epoch 20: loss 0.4971  lr 1.00e-03  quickcheck_cell_acc 0.017
+  epoch 25: loss 0.4499  lr 1.00e-03  quickcheck_cell_acc 0.019
+  epoch 30: loss 0.4014  lr 1.00e-03  quickcheck_cell_acc 0.026
+  epoch 35: loss 0.3637  lr 1.00e-03  quickcheck_cell_acc 0.025
+  epoch 39: loss 0.3341  lr 1.00e-03  quickcheck_cell_acc 0.031
+  best checkpoint: epoch 39 (quickcheck_cell_acc 0.031)
+[hybrid] real-eval (baseline): exact_match=0.000 mean_cell_acc=0.044 shape_match_rate=0.065
+[hybrid] real-eval (with_verifier): exact_match=0.000 mean_cell_acc=0.044 shape_match_rate=0.065
+
+=== SUMMARY (real ARC-AGI-2, filtered eval subset) ===
+filtered eval coverage: 96/120 tasks (80.0%)
+symbolic_only: 0/139 exact matches
+mamba: params=1,022,336 baseline(exact=0.000 cell=0.047 shape=0.072) with_verifier(exact=0.000 cell=0.047 shape=0.072)
+hybrid: params=1,103,872 baseline(exact=0.000 cell=0.044 shape=0.065) with_verifier(exact=0.000 cell=0.044 shape=0.065)
+
+total time: 4115.6s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 428771 bytes to __results__.html

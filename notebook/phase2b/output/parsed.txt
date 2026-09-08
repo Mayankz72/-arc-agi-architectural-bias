@@ -1,0 +1,64 @@
+Installing mamba-ssm...
+mamba-ssm installed OK
+/kaggle/input contents: ['datasets']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared contents: ['arc_common', 'vendor', 'generator.py', 'data']
+Device: cuda Tesla T4
+built 2400 leave-one-out training examples
+reference (transformer, 4 layers): 795,520 params
+mamba: 5 layers -> 848,256 params (target 795,520)
+hybrid: 4 layers -> 894,592 params (target 795,520)
+
+=== training transformer (795,520 params) on 2400 examples ===
+  epoch 0: loss 26.1012  lr 2.50e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.7186  lr 1.00e-03  quickcheck_cell_acc 0.021
+  epoch 40: loss 0.6145  lr 1.00e-03  quickcheck_cell_acc 0.141
+  epoch 60: loss 0.5261  lr 1.00e-03  quickcheck_cell_acc 0.191
+  epoch 79: loss 0.4413  lr 1.00e-03  quickcheck_cell_acc 0.123
+  best checkpoint: epoch 60 (quickcheck_cell_acc 0.191)
+  [transformer/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=6x3 cell_acc=0.56
+  [transformer/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=8x6 cell_acc=0.69
+[transformer] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.309 shape_match_rate=0.492
+  [transformer/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=3x3 cell_acc=0.44
+  [transformer/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=3x7 cell_acc=0.00
+[transformer] heldout (compositional): exact_match=0.000 mean_cell_acc=0.235 shape_match_rate=0.380
+
+=== training mamba (848,256 params) on 2400 examples ===
+  epoch 0: loss 43.5845  lr 2.50e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6688  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 40: loss 0.4019  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 60: loss 0.1739  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 79: loss 0.0969  lr 1.00e-03  quickcheck_cell_acc 0.000
+  best checkpoint: epoch 79 (quickcheck_cell_acc 0.000)
+  [mamba/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=4x6 cell_acc=0.00
+  [mamba/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=invalid cell_acc=0.00
+[mamba] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.045 shape_match_rate=0.083
+  [mamba/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=5x4 cell_acc=0.00
+  [mamba/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=invalid cell_acc=0.00
+[mamba] heldout (compositional): exact_match=0.000 mean_cell_acc=0.034 shape_match_rate=0.070
+
+=== training hybrid (894,592 params) on 2400 examples ===
+  epoch 0: loss 30.7234  lr 2.50e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.5894  lr 1.00e-03  quickcheck_cell_acc 0.022
+  epoch 40: loss 0.2877  lr 1.00e-03  quickcheck_cell_acc 0.016
+  epoch 60: loss 0.1137  lr 1.00e-03  quickcheck_cell_acc 0.017
+  epoch 79: loss 0.0729  lr 1.00e-03  quickcheck_cell_acc 0.015
+  best checkpoint: epoch 20 (quickcheck_cell_acc 0.022)
+  [hybrid/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=7x6 cell_acc=0.00
+  [hybrid/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=11x6 cell_acc=0.00
+[hybrid] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.050 shape_match_rate=0.075
+  [hybrid/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=4x3 cell_acc=0.00
+  [hybrid/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=11x7 cell_acc=0.00
+[hybrid] heldout (compositional): exact_match=0.000 mean_cell_acc=0.069 shape_match_rate=0.105
+
+=== SUMMARY ===
+transformer: params=795,520 train_eval(exact=0.000 cell=0.309 shape=0.492) heldout(exact=0.000 cell=0.235 shape=0.380)
+mamba: params=848,256 train_eval(exact=0.000 cell=0.045 shape=0.083) heldout(exact=0.000 cell=0.034 shape=0.070)
+hybrid: params=894,592 train_eval(exact=0.000 cell=0.050 shape=0.075) heldout(exact=0.000 cell=0.069 shape=0.105)
+
+total time: 2953.3s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 369935 bytes to __results__.html

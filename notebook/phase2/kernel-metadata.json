@@ -1,0 +1,16 @@
+{
+  "id": "kojijhjughio/arc-agi-2-inductive-bias-phase-2-train",
+  "title": "ARC-AGI-2 Inductive Bias - Phase 2 Train",
+  "code_file": "phase2_train.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["kojijhjughio/arc-agi-inductive-bias-shared"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

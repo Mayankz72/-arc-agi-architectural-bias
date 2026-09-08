@@ -1,0 +1,1 @@
+{"current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2": 0.03363095238095238, "original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2": 0.019047619047619046, "no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0": 0.01875}

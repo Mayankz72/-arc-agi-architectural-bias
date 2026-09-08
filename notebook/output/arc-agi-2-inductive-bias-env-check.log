@@ -1,0 +1,70 @@
+[{"stream_name":"stdout","time":7.139931534,"data":"=== Environment check ===\n"}
+,{"stream_name":"stdout","time":7.140727309,"data":"Python: 3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]\n"}
+,{"stream_name":"stdout","time":7.140733037,"data":"PyTorch: 2.10.0+cu128\n"}
+,{"stream_name":"stdout","time":7.40747726,"data":"CUDA available: True\n"}
+,{"stream_name":"stdout","time":7.450018347,"data":"Device: Tesla T4\n"}
+,{"stream_name":"stdout","time":7.450042017,"data":"VRAM (GB): 15.6\n"}
+,{"stream_name":"stdout","time":7.45004681,"data":"\n"}
+,{"stream_name":"stdout","time":7.4500507,"data":"=== Installing mamba-ssm ===\n"}
+,{"stream_name":"stdout","time":49.487409558,"data":"0 in /usr/local/lib/python3.12/dist-packages (from rich\u003e=12.3.0-\u003etyper-\u003ehuggingface-hub\u003c2.0,\u003e=1.3.0-\u003etransformers-\u003emamba-ssm) (4.0.0)\n"}
+,{"stream_name":"stdout","time":49.487447856,"data":"Requirement already satisfied: pygments\u003c3.0.0,\u003e=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich\u003e=12.3.0-\u003etyper-\u003ehuggingface-hub\u003c2.0,\u003e=1.3.0-\u003etransformers-\u003emamba-ssm) (2.20.0)\n"}
+,{"stream_name":"stdout","time":49.487462915,"data":"Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py\u003e=2.2.0-\u003erich\u003e=12.3.0-\u003etyper-\u003ehuggingface-hub\u003c2.0,\u003e=1.3.0-\u003etransformers-\u003emamba-ssm) (0.1.2)\n"}
+,{"stream_name":"stdout","time":49.487469489,"data":"Downloading tilelang-0.1.8-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (43.5 MB)\n"}
+,{"stream_name":"stdout","time":49.487474991,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.5/43.5 MB 45.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487481445,"data":"Downloading apache_tvm_ffi-0.1.9-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (2.3 MB)\n"}
+,{"stream_name":"stdout","time":49.487486373,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 79.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487491206,"data":"Downloading quack_kernels-0.6.4-py3-none-any.whl (728 kB)\n"}
+,{"stream_name":"stdout","time":49.487495608,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 728.5/728.5 kB 44.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487501061,"data":"Downloading nvidia_cutlass_dsl-4.6.2-py3-none-any.whl (10 kB)\n"}
+,{"stream_name":"stdout","time":49.487506107,"data":"Downloading nvidia_cutlass_dsl_libs_base-4.6.2-cp312-cp312-manylinux_2_28_x86_64.whl (2.8 MB)\n"}
+,{"stream_name":"stdout","time":49.487510817,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 90.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487521445,"data":"Downloading nvidia_cutlass_dsl_libs_cu12-4.6.2-cp312-cp312-manylinux_2_28_x86_64.whl (88.5 MB)\n"}
+,{"stream_name":"stdout","time":49.487525056,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.5/88.5 MB 21.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487528377,"data":"Downloading nvidia_cutlass_dsl_libs_core-4.6.2-py3-none-any.whl (772 kB)\n"}
+,{"stream_name":"stdout","time":49.487532601,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 772.4/772.4 kB 31.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487536074,"data":"Downloading z3_solver-4.15.4.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.3 MB)\n"}
+,{"stream_name":"stdout","time":49.487553612,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.3/29.3 MB 63.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487556506,"data":"Downloading torch_c_dlpack_ext-0.1.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (897 kB)\n"}
+,{"stream_name":"stdout","time":49.487558869,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.8/897.8 kB 45.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487561504,"data":"Downloading nvidia_cuda_nvdisasm-13.3.73-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)\n"}
+,{"stream_name":"stdout","time":49.487595985,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 102.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487604014,"data":"Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)\n"}
+,{"stream_name":"stdout","time":49.487608045,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.4/323.4 kB 17.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":49.487612226,"data":"Building wheels for collected packages: mamba-ssm, causal-conv1d\n"}
+,{"stream_name":"stdout","time":49.487616068,"data":"  Building wheel for mamba-ssm (pyproject.toml): started\n"}
+,{"stream_name":"stdout","time":49.487619566,"data":"  Building wheel for mamba-ssm (pyproject.toml): finished with status 'done'\n"}
+,{"stream_name":"stdout","time":49.487623555,"data":"  Created wheel for mamba-ssm: filename=mamba_ssm-2.3.2.post1-cp312-cp312-linux_x86_64.whl size=322288410 sha256=7a67070c1e7e99c95abd1319623f044e8a1b3fb46f774bfdea949f0a4fc79638\n"}
+,{"stream_name":"stdout","time":49.487628197,"data":"  Stored in directory: /root/.cache/pip/wheels/da/67/03/99148d6eeaa4ec2855d71295ac83bcbc8ba7b41a2982992c63\n"}
+,{"stream_name":"stdout","time":49.487633392,"data":"  Building wheel for causal-conv1d (pyproject.toml): started\n"}
+,{"stream_name":"stdout","time":49.487640209,"data":"  Building wheel for causal-conv1d (pyproject.toml): finished with status 'done'\n"}
+,{"stream_name":"stdout","time":49.487642633,"data":"  Created wheel for causal-conv1d: filename=causal_conv1d-1.7.0-cp312-cp312-linux_x86_64.whl size=196558813 sha256=8e81f8c76435ad31aa41edc6c0c9d26de971a293b190183d2816da71547614d7\n"}
+,{"stream_name":"stdout","time":49.487645164,"data":"  Stored in directory: /root/.cache/pip/wheels/6f/0b/1b/e063b1e314a5ff0783e450525921cb8f5c48fbb03639bad6ba\n"}
+,{"stream_name":"stdout","time":49.487647486,"data":"Successfully built mamba-ssm causal-conv1d\n"}
+,{"stream_name":"stdout","time":49.487654762,"data":"Installing collected packages: z3-solver, protobuf, nvidia-cuda-nvdisasm, apache-tvm-ffi, nvidia-cutlass-dsl-libs-core, torch-c-dlpack-ext, nvidia-cutlass-dsl-libs-base, causal-conv1d, tilelang, nvidia-cutlass-dsl-libs-cu12, nvidia-cutlass-dsl, quack-kernels, mamba-ssm\n"}
+,{"stream_name":"stdout","time":49.487657657,"data":"  Attempting uninstall: protobuf\n"}
+,{"stream_name":"stdout","time":49.487659976,"data":"    Found existing installation: protobuf 5.29.5\n"}
+,{"stream_name":"stdout","time":49.487662204,"data":"    Uninstalling protobuf-5.29.5:\n"}
+,{"stream_name":"stdout","time":49.487664411,"data":"      Successfully uninstalled protobuf-5.29.5\n"}
+,{"stream_name":"stdout","time":49.487666723,"data":"Successfully installed apache-tvm-ffi-0.1.9 causal-conv1d-1.7.0 mamba-ssm-2.3.2.post1 nvidia-cuda-nvdisasm-13.3.73 nvidia-cutlass-dsl-4.6.2 nvidia-cutlass-dsl-libs-base-4.6.2 nvidia-cutlass-dsl-libs-core-4.6.2 nvidia-cutlass-dsl-libs-cu12-4.6.2 protobuf-6.33.6 quack-kernels-0.6.4 tilelang-0.1.8 torch-c-dlpack-ext-0.1.5 z3-solver-4.15.4.0\n"}
+,{"stream_name":"stdout","time":49.487673291,"data":"\n"}
+,{"stream_name":"stdout","time":49.487675637,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stdout","time":49.487678098,"data":"bigframes 2.39.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stdout","time":49.48768053,"data":"google-adk 1.29.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stdout","time":49.487683081,"data":"grpcio-tools 1.71.2 requires protobuf\u003c6.0dev,\u003e=5.26.1, but you have protobuf 6.33.6 which is incompatible.\n"}
+,{"stream_name":"stdout","time":49.487685524,"data":"google-ai-generativelanguage 0.6.15 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c6.0.0dev,\u003e=3.20.2, but you have protobuf 6.33.6 which is incompatible.\n"}
+,{"stream_name":"stdout","time":49.487688077,"data":"grpcio-status 1.71.2 requires protobuf\u003c6.0dev,\u003e=5.26.1, but you have protobuf 6.33.6 which is incompatible.\n"}
+,{"stream_name":"stdout","time":49.487690466,"data":"\n"}
+,{"stream_name":"stdout","time":49.487692635,"data":"\n"}
+,{"stream_name":"stdout","time":49.487694752,"data":"=== Importing mamba-ssm ===\n"}
+,{"stream_name":"stdout","time":75.812342176,"data":"mamba-ssm works. Output shape: torch.Size([2, 10, 64])\n"}
+,{"stream_name":"stdout","time":75.812380606,"data":"\n"}
+,{"stream_name":"stdout","time":75.812384005,"data":"=== ARC-AGI-2 data check ===\n"}
+,{"stream_name":"stdout","time":75.812386913,"data":"/kaggle/input contents: ['competitions']\n"}
+,{"stream_name":"stdout","time":75.812401402,"data":"Competition data not attached at /kaggle/input/arc-prize-2026-arc-agi-2\n"}
+,{"stream_name":"stderr","time":79.142288478,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":79.142325725,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":79.382660545,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":79.382689885,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":80.093300386,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":81.327484204,"data":"[NbConvertApp] Writing 281531 bytes to __results__.html\n"}
+]

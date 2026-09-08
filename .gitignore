@@ -1,0 +1,30 @@
+__pycache__/
+*.pyc
+
+# Local Claude Code project settings, not part of the project itself
+.claude/
+
+# Packaging mirror used only to push the Kaggle Dataset (kaggle_dataset/) --
+# duplicates arc_common/, vendor/, generator.py, which are the canonical
+# source; not meaningful to a reader of the repo.
+kaggle_dataset/
+
+# Empty scratch directory, not used
+notebook_filetest/
+
+# Real ARC-AGI-2 competition data: not committed, both to avoid any
+# redistribution-licensing ambiguity around Kaggle/ARC Prize's own dataset,
+# and because it's easily reproduced -- see README for the download command.
+data/arc-agi_*.json
+data/sample_submission.json
+data/*.zip
+
+# Synthetic benchmark data: deterministic output of generator.py (fixed
+# seeds), regenerate with `python generator.py` rather than committing it.
+data/synthetic/
+data/synthetic_sev2/
+data/synthetic_sev3/
+
+# Kaggle notebook full-run artifacts are large HTML result pages Kaggle
+# generates alongside the logs/results JSON we do keep.
+notebook/*/output*/*.html

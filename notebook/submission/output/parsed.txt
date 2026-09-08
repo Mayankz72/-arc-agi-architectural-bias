@@ -1,0 +1,45 @@
+/kaggle/input contents: ['datasets', 'competitions']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared
+Using COMPETITION_ROOT: /kaggle/input/competitions/arc-prize-2026-arc-agi-2 contents: ['arc-agi_training_solutions.json', 'arc-agi_evaluation_solutions.json', 'arc-agi_evaluation_challenges.json', 'sample_submission.json', 'arc-agi_training_challenges.json', 'arc-agi_test_challenges.json']
+Device: cuda Tesla T4
+SMOKE_TEST = False
+real data loaded: 1000 training, 120 public-eval, 240 blind-test tasks
+build_training_examples: kept 4298, dropped 10 oversized (> 8192 tokens)
+built 4298 leave-one-out training examples
+training Transformer (795,520 params) on 4298 examples, 538 steps/epoch, max_train_seconds=21600
+  epoch 4: t=1120s loss 0.8638 lr 1.00e-03 quickcheck_cell_acc 0.000
+  epoch 8: t=2126s loss 0.7623 lr 1.00e-03 quickcheck_cell_acc 0.018
+  epoch 12: t=3115s loss 0.7072 lr 1.00e-03 quickcheck_cell_acc 0.003
+  epoch 16: t=4101s loss 0.6683 lr 1.00e-03 quickcheck_cell_acc 0.010
+  epoch 20: t=5073s loss 0.6282 lr 1.00e-03 quickcheck_cell_acc 0.016
+  epoch 24: t=6050s loss 0.5800 lr 1.00e-03 quickcheck_cell_acc 0.019
+  epoch 28: t=7013s loss 0.5322 lr 1.00e-03 quickcheck_cell_acc 0.021
+  epoch 32: t=7994s loss 0.4921 lr 1.00e-03 quickcheck_cell_acc 0.021
+  epoch 36: t=8975s loss 0.4584 lr 1.00e-03 quickcheck_cell_acc 0.026
+  epoch 40: t=9941s loss 0.4208 lr 1.00e-03 quickcheck_cell_acc 0.028
+  epoch 44: t=10907s loss 0.3865 lr 1.00e-03 quickcheck_cell_acc 0.027
+  epoch 48: t=11869s loss 0.3637 lr 1.00e-03 quickcheck_cell_acc 0.026
+  epoch 52: t=12839s loss 0.3421 lr 1.00e-03 quickcheck_cell_acc 0.025
+  epoch 56: t=13796s loss 0.3235 lr 1.00e-03 quickcheck_cell_acc 0.023
+  epoch 60: t=14752s loss 0.3063 lr 1.00e-03 quickcheck_cell_acc 0.022
+  epoch 64: t=15702s loss 0.2959 lr 1.00e-03 quickcheck_cell_acc 0.025
+  epoch 68: t=16651s loss 0.2768 lr 1.00e-03 quickcheck_cell_acc 0.022
+  epoch 72: t=17610s loss 0.2683 lr 1.00e-03 quickcheck_cell_acc 0.059
+  epoch 76: t=18546s loss 0.2580 lr 1.00e-03 quickcheck_cell_acc 0.088
+  epoch 80: t=19505s loss 0.2497 lr 1.00e-03 quickcheck_cell_acc 0.047
+  epoch 84: t=20447s loss 0.2439 lr 1.00e-03 quickcheck_cell_acc 0.055
+  epoch 88: t=21399s loss 0.2320 lr 1.00e-03 quickcheck_cell_acc 0.054
+  epoch 89: t=21670s loss 0.2343 lr 1.00e-03 quickcheck_cell_acc 0.048
+  stopping: max_train_seconds (21600s) reached at epoch 90
+  best checkpoint: epoch 76 (quickcheck_cell_acc 0.088), total epochs run: 90
+  generation failed for a task (Expected size for first two dimensions of batch2 tensor to be: [4, 9344] but got: [4, 9345].); falling back to a 1x1 placeholder
+public-eval sanity check: exact_match=0.000 over 120 tasks (not part of the submission)
+submission.json validated OK: 2 symbolic, 174 neural, 83 fallback (of 259 total test outputs)
+
+total time: 22355.4s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 395427 bytes to __results__.html

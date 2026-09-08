@@ -1,0 +1,135 @@
+Installing mamba-ssm...
+mamba-ssm installed OK
+/kaggle/input contents: ['datasets']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared contents: ['arc_common', 'vendor', 'generator.py', 'data']
+Device: cuda Tesla T4
+
+================================================================================
+SEVERITY 1: 12 train combos, 4 heldout combos, 50 tasks/train-combo
+================================================================================
+built 2400 leave-one-out training examples
+
+=== training transformer (795,520 params) on 2400 examples ===
+  epoch 0: loss 26.1012  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.7292  quickcheck_cell_acc 0.064
+  epoch 40: loss 0.6223  quickcheck_cell_acc 0.195
+  epoch 60: loss 0.5487  quickcheck_cell_acc 0.117
+  epoch 79: loss 0.4648  quickcheck_cell_acc 0.167
+  best checkpoint: epoch 40 (quickcheck_cell_acc 0.195)
+[transformer] sev1 train_eval: exact_match=0.000 mean_cell_acc=0.298 shape_match_rate=0.458
+[transformer] sev1 heldout: exact_match=0.000 mean_cell_acc=0.241 shape_match_rate=0.370
+
+=== training mamba (848,256 params) on 2400 examples ===
+  epoch 0: loss 43.5845  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6655  quickcheck_cell_acc 0.000
+  epoch 40: loss 0.3947  quickcheck_cell_acc 0.019
+  epoch 60: loss 0.1749  quickcheck_cell_acc 0.000
+  epoch 79: loss 0.0929  quickcheck_cell_acc 0.000
+  best checkpoint: epoch 40 (quickcheck_cell_acc 0.019)
+[mamba] sev1 train_eval: exact_match=0.000 mean_cell_acc=0.054 shape_match_rate=0.092
+[mamba] sev1 heldout: exact_match=0.000 mean_cell_acc=0.058 shape_match_rate=0.100
+
+=== training hybrid (894,592 params) on 2400 examples ===
+  epoch 0: loss 30.7234  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.5717  quickcheck_cell_acc 0.000
+  epoch 40: loss 0.2773  quickcheck_cell_acc 0.014
+  epoch 60: loss 0.1097  quickcheck_cell_acc 0.016
+  epoch 79: loss 0.0700  quickcheck_cell_acc 0.000
+  best checkpoint: epoch 60 (quickcheck_cell_acc 0.016)
+[hybrid] sev1 train_eval: exact_match=0.000 mean_cell_acc=0.031 shape_match_rate=0.067
+[hybrid] sev1 heldout: exact_match=0.000 mean_cell_acc=0.042 shape_match_rate=0.085
+
+================================================================================
+SEVERITY 2: 8 train combos, 8 heldout combos, 75 tasks/train-combo
+================================================================================
+built 2400 leave-one-out training examples
+
+=== training transformer (795,520 params) on 2400 examples ===
+  epoch 0: loss 26.0747  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.7012  quickcheck_cell_acc 0.162
+  epoch 40: loss 0.6052  quickcheck_cell_acc 0.396
+  epoch 60: loss 0.5151  quickcheck_cell_acc 0.391
+  epoch 79: loss 0.4214  quickcheck_cell_acc 0.362
+  best checkpoint: epoch 40 (quickcheck_cell_acc 0.396)
+[transformer] sev2 train_eval: exact_match=0.000 mean_cell_acc=0.377 shape_match_rate=0.575
+[transformer] sev2 heldout: exact_match=0.000 mean_cell_acc=0.156 shape_match_rate=0.242
+
+=== training mamba (848,256 params) on 2400 examples ===
+  epoch 0: loss 43.6249  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6457  quickcheck_cell_acc 0.077
+  epoch 40: loss 0.3916  quickcheck_cell_acc 0.080
+  epoch 60: loss 0.1729  quickcheck_cell_acc 0.045
+  epoch 79: loss 0.0933  quickcheck_cell_acc 0.077
+  best checkpoint: epoch 40 (quickcheck_cell_acc 0.080)
+[mamba] sev2 train_eval: exact_match=0.000 mean_cell_acc=0.079 shape_match_rate=0.150
+[mamba] sev2 heldout: exact_match=0.000 mean_cell_acc=0.047 shape_match_rate=0.085
+
+=== training hybrid (894,592 params) on 2400 examples ===
+  epoch 0: loss 30.7440  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.5705  quickcheck_cell_acc 0.100
+  epoch 40: loss 0.2972  quickcheck_cell_acc 0.065
+  epoch 60: loss 0.1200  quickcheck_cell_acc 0.097
+  epoch 79: loss 0.0722  quickcheck_cell_acc 0.089
+  best checkpoint: epoch 20 (quickcheck_cell_acc 0.100)
+[hybrid] sev2 train_eval: exact_match=0.000 mean_cell_acc=0.058 shape_match_rate=0.100
+[hybrid] sev2 heldout: exact_match=0.000 mean_cell_acc=0.050 shape_match_rate=0.077
+
+================================================================================
+SEVERITY 3: 4 train combos, 12 heldout combos, 150 tasks/train-combo
+================================================================================
+built 2400 leave-one-out training examples
+
+=== training transformer (795,520 params) on 2400 examples ===
+  epoch 0: loss 26.0836  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6522  quickcheck_cell_acc 0.484
+  epoch 40: loss 0.4865  quickcheck_cell_acc 0.470
+  epoch 60: loss 0.3175  quickcheck_cell_acc 0.639
+  epoch 79: loss 0.0928  quickcheck_cell_acc 0.809
+  best checkpoint: epoch 79 (quickcheck_cell_acc 0.809)
+[transformer] sev3 train_eval: exact_match=0.325 mean_cell_acc=0.852 shape_match_rate=0.925
+[transformer] sev3 heldout: exact_match=0.002 mean_cell_acc=0.108 shape_match_rate=0.222
+
+=== training mamba (848,256 params) on 2400 examples ===
+  epoch 0: loss 43.3874  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6306  quickcheck_cell_acc 0.143
+  epoch 40: loss 0.3794  quickcheck_cell_acc 0.117
+  epoch 60: loss 0.1843  quickcheck_cell_acc 0.106
+  epoch 79: loss 0.0954  quickcheck_cell_acc 0.165
+  best checkpoint: epoch 79 (quickcheck_cell_acc 0.165)
+[mamba] sev3 train_eval: exact_match=0.000 mean_cell_acc=0.124 shape_match_rate=0.250
+[mamba] sev3 heldout: exact_match=0.000 mean_cell_acc=0.040 shape_match_rate=0.075
+
+=== training hybrid (894,592 params) on 2400 examples ===
+  epoch 0: loss 30.5443  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.5460  quickcheck_cell_acc 0.145
+  epoch 40: loss 0.2957  quickcheck_cell_acc 0.088
+  epoch 60: loss 0.1241  quickcheck_cell_acc 0.050
+  epoch 79: loss 0.0719  quickcheck_cell_acc 0.087
+  best checkpoint: epoch 20 (quickcheck_cell_acc 0.145)
+[hybrid] sev3 train_eval: exact_match=0.000 mean_cell_acc=0.125 shape_match_rate=0.200
+[hybrid] sev3 heldout: exact_match=0.000 mean_cell_acc=0.037 shape_match_rate=0.058
+
+=== SUMMARY (compositional-split-severity sweep) ===
+
+severity_1 (12 train / 4 heldout combos):
+  transformer: params=795,520 train_eval(cell=0.298 shape=0.458) heldout(cell=0.241 shape=0.370)
+  mamba: params=848,256 train_eval(cell=0.054 shape=0.092) heldout(cell=0.058 shape=0.100)
+  hybrid: params=894,592 train_eval(cell=0.031 shape=0.067) heldout(cell=0.042 shape=0.085)
+
+severity_2 (8 train / 8 heldout combos):
+  transformer: params=795,520 train_eval(cell=0.377 shape=0.575) heldout(cell=0.156 shape=0.242)
+  mamba: params=848,256 train_eval(cell=0.079 shape=0.150) heldout(cell=0.047 shape=0.085)
+  hybrid: params=894,592 train_eval(cell=0.058 shape=0.100) heldout(cell=0.050 shape=0.077)
+
+severity_3 (4 train / 12 heldout combos):
+  transformer: params=795,520 train_eval(cell=0.852 shape=0.925) heldout(cell=0.108 shape=0.222)
+  mamba: params=848,256 train_eval(cell=0.124 shape=0.250) heldout(cell=0.040 shape=0.075)
+  hybrid: params=894,592 train_eval(cell=0.125 shape=0.200) heldout(cell=0.037 shape=0.058)
+
+total time: 9178.3s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 369860 bytes to __results__.html

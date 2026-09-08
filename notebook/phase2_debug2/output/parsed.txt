@@ -1,0 +1,50 @@
+/kaggle/input contents: ['datasets']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared
+Device: cuda Tesla T4
+built 2400 leave-one-out training examples
+
+=== config 'abs-pos, teacher-forcing (repeat of prior best)': use_rope=False scheduled_sampling=False (1,057,664 params, 3000 total steps) ===
+  epoch 0: loss 18.2731  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 10: loss 1.2064  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 20: loss 1.1263  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 30: loss 1.0273  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 39: loss 0.9039  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000
+  'abs-pos, teacher-forcing (repeat of prior best)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)
+
+=== config 'RoPE, teacher-forcing': use_rope=True scheduled_sampling=False (795,520 params, 3000 total steps) ===
+  epoch 0: loss 19.6436  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 10: loss 0.8488  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.7404  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 30: loss 0.6692  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.041
+  epoch 39: loss 0.6242  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.204
+  'RoPE, teacher-forcing' best checkpoint: epoch 39 (quickcheck_cell_acc 0.204)
+
+=== config 'abs-pos, scheduled-sampling (ramp to p=0.5)': use_rope=False scheduled_sampling=True (1,057,664 params, 3000 total steps) ===
+  epoch 0: loss 18.2684  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 10: loss 1.2327  lr 1.00e-03  ss_p 0.13  quickcheck_cell_acc 0.000
+  epoch 20: loss 1.1939  lr 1.00e-03  ss_p 0.26  quickcheck_cell_acc 0.000
+  epoch 30: loss 1.1545  lr 1.00e-03  ss_p 0.38  quickcheck_cell_acc 0.000
+  epoch 39: loss 1.0938  lr 1.00e-03  ss_p 0.50  quickcheck_cell_acc 0.000
+  'abs-pos, scheduled-sampling (ramp to p=0.5)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)
+
+=== config 'RoPE, scheduled-sampling (ramp to p=0.5)': use_rope=True scheduled_sampling=True (795,520 params, 3000 total steps) ===
+  epoch 0: loss 19.6295  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000
+  epoch 10: loss 0.9766  lr 1.00e-03  ss_p 0.13  quickcheck_cell_acc 0.020
+  epoch 20: loss 0.8703  lr 1.00e-03  ss_p 0.26  quickcheck_cell_acc 0.059
+  epoch 30: loss 0.8521  lr 1.00e-03  ss_p 0.38  quickcheck_cell_acc 0.082
+  epoch 39: loss 0.8341  lr 1.00e-03  ss_p 0.50  quickcheck_cell_acc 0.085
+  'RoPE, scheduled-sampling (ramp to p=0.5)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.085)
+
+=== SUMMARY ===
+abs-pos, teacher-forcing (repeat of prior best): best quickcheck_cell_acc = 0.000
+RoPE, teacher-forcing: best quickcheck_cell_acc = 0.204
+abs-pos, scheduled-sampling (ramp to p=0.5): best quickcheck_cell_acc = 0.000
+RoPE, scheduled-sampling (ramp to p=0.5): best quickcheck_cell_acc = 0.085
+
+total time: 2942.9s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 350448 bytes to __results__.html

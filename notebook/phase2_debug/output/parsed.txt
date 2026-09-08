@@ -1,0 +1,42 @@
+Installing mamba-ssm (not used here, but kept for parity with phase2_train.py's environment)...
+/kaggle/input contents: ['datasets']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared
+Device: cuda Tesla T4
+built 2400 leave-one-out training examples
+
+=== config 'baseline (no warmup, no clip, lr=3e-4)': lr=0.0003 warmup_frac=0.0 grad_clip=None (1,057,664 params, 3000 total steps) ===
+  epoch 0: loss 8.2367  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 10: loss 1.2678  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 1.2013  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 30: loss 1.1742  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 39: loss 1.1578  lr 3.00e-04  quickcheck_cell_acc 0.000
+  'baseline (no warmup, no clip, lr=3e-4)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)
+
+=== config 'warmup+clip, lr=3e-4': lr=0.0003 warmup_frac=0.05 grad_clip=1.0 (1,057,664 params, 3000 total steps) ===
+  epoch 0: loss 29.6941  lr 1.50e-04  quickcheck_cell_acc 0.000
+  epoch 10: loss 1.2349  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 1.1809  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 30: loss 1.1537  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 39: loss 1.1306  lr 3.00e-04  quickcheck_cell_acc 0.000
+  'warmup+clip, lr=3e-4' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)
+
+=== config 'warmup+clip, lr=1e-3': lr=0.001 warmup_frac=0.05 grad_clip=1.0 (1,057,664 params, 3000 total steps) ===
+  epoch 0: loss 18.2731  lr 5.00e-04  quickcheck_cell_acc 0.000
+  epoch 10: loss 1.2005  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 20: loss 1.1231  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 30: loss 1.0246  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 39: loss 0.8964  lr 1.00e-03  quickcheck_cell_acc 0.000
+  'warmup+clip, lr=1e-3' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)
+
+=== SUMMARY ===
+baseline (no warmup, no clip, lr=3e-4): best quickcheck_cell_acc = 0.000
+warmup+clip, lr=3e-4: best quickcheck_cell_acc = 0.000
+warmup+clip, lr=1e-3: best quickcheck_cell_acc = 0.000
+
+total time: 2299.7s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 331203 bytes to __results__.html

@@ -1,0 +1,43 @@
+Installing mamba-ssm...
+mamba-ssm installed OK
+/kaggle/input contents: ['datasets']
+Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared
+Device: cuda Tesla T4
+built 2400 leave-one-out training examples
+
+=== config 'current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2': lr=0.001 warmup_frac=0.05 grad_clip=1.0 wd=0.01 (848,256 params, 6000 total steps) ===
+  epoch 0: loss 43.5845  lr 2.50e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6631  lr 1.00e-03  quickcheck_cell_acc 0.025
+  epoch 40: loss 0.3960  lr 1.00e-03  quickcheck_cell_acc 0.034
+  epoch 60: loss 0.1756  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 79: loss 0.0952  lr 1.00e-03  quickcheck_cell_acc 0.000
+  'current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2' best checkpoint: epoch 40 (quickcheck_cell_acc 0.034)
+
+=== config 'original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2': lr=0.0003 warmup_frac=0.0 grad_clip=None wd=0.01 (848,256 params, 6000 total steps) ===
+  epoch 0: loss 20.7895  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.8401  lr 3.00e-04  quickcheck_cell_acc 0.000
+  epoch 40: loss 0.7174  lr 3.00e-04  quickcheck_cell_acc 0.017
+  epoch 60: loss 0.6499  lr 3.00e-04  quickcheck_cell_acc 0.019
+  epoch 79: loss 0.5507  lr 3.00e-04  quickcheck_cell_acc 0.019
+  'original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2' best checkpoint: epoch 79 (quickcheck_cell_acc 0.019)
+
+=== config 'no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0': lr=0.001 warmup_frac=0.05 grad_clip=1.0 wd=0.0 (848,256 params, 6000 total steps) ===
+  epoch 0: loss 43.5850  lr 2.50e-04  quickcheck_cell_acc 0.000
+  epoch 20: loss 0.6607  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 40: loss 0.3909  lr 1.00e-03  quickcheck_cell_acc 0.019
+  epoch 60: loss 0.1766  lr 1.00e-03  quickcheck_cell_acc 0.000
+  epoch 79: loss 0.0970  lr 1.00e-03  quickcheck_cell_acc 0.015
+  'no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0' best checkpoint: epoch 40 (quickcheck_cell_acc 0.019)
+
+=== SUMMARY ===
+current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2: best quickcheck_cell_acc = 0.034
+original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2: best quickcheck_cell_acc = 0.019
+no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0: best quickcheck_cell_acc = 0.019
+
+total time: 2665.5s
+/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 330189 bytes to __results__.html

@@ -1,0 +1,65 @@
+[{"stream_name":"stdout","time":1.002041502,"data":"Installing mamba-ssm...\n"}
+,{"stream_name":"stdout","time":59.236925964,"data":"mamba-ssm installed OK\n"}
+,{"stream_name":"stdout","time":60.937400437,"data":"/kaggle/input contents: ['datasets']\n"}
+,{"stream_name":"stdout","time":60.946761276,"data":"Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared contents: ['arc_common', 'vendor', 'generator.py', 'data']\n"}
+,{"stream_name":"stdout","time":86.46259003,"data":"Device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":86.625396724,"data":"built 2400 leave-one-out training examples\n"}
+,{"stream_name":"stdout","time":86.728310018,"data":"reference (transformer, 4 layers): 795,520 params\n"}
+,{"stream_name":"stdout","time":87.490387072,"data":"mamba: 5 layers -\u003e 848,256 params (target 795,520)\n"}
+,{"stream_name":"stdout","time":88.083462681,"data":"hybrid: 4 layers -\u003e 894,592 params (target 795,520)\n"}
+,{"stream_name":"stdout","time":88.338843021,"data":"\n"}
+,{"stream_name":"stdout","time":88.338881702,"data":"=== training transformer (795,520 params) on 2400 examples ===\n"}
+,{"stream_name":"stdout","time":124.101123375,"data":"  epoch 0: loss 26.1012  lr 2.50e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":369.862127865,"data":"  epoch 20: loss 0.7186  lr 1.00e-03  quickcheck_cell_acc 0.021\n"}
+,{"stream_name":"stdout","time":618.111686114,"data":"  epoch 40: loss 0.6145  lr 1.00e-03  quickcheck_cell_acc 0.141\n"}
+,{"stream_name":"stdout","time":865.764416939,"data":"  epoch 60: loss 0.5261  lr 1.00e-03  quickcheck_cell_acc 0.191\n"}
+,{"stream_name":"stdout","time":1102.816461809,"data":"  epoch 79: loss 0.4413  lr 1.00e-03  quickcheck_cell_acc 0.123\n"}
+,{"stream_name":"stdout","time":1102.816515481,"data":"  best checkpoint: epoch 60 (quickcheck_cell_acc 0.191)\n"}
+,{"stream_name":"stdout","time":1102.880993366,"data":"  [transformer/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=6x3 cell_acc=0.56\n"}
+,{"stream_name":"stdout","time":1103.028756582,"data":"  [transformer/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=8x6 cell_acc=0.69\n"}
+,{"stream_name":"stdout","time":1123.215563959,"data":"[transformer] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.309 shape_match_rate=0.492\n"}
+,{"stream_name":"stdout","time":1123.247873847,"data":"  [transformer/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=3x3 cell_acc=0.44\n"}
+,{"stream_name":"stdout","time":1123.309678567,"data":"  [transformer/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=3x7 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":1143.414304294,"data":"[transformer] heldout (compositional): exact_match=0.000 mean_cell_acc=0.235 shape_match_rate=0.380\n"}
+,{"stream_name":"stdout","time":1143.42860495,"data":"\n"}
+,{"stream_name":"stdout","time":1143.42862973,"data":"=== training mamba (848,256 params) on 2400 examples ===\n"}
+,{"stream_name":"stdout","time":1189.923319744,"data":"  epoch 0: loss 43.5845  lr 2.50e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1401.463460985,"data":"  epoch 20: loss 0.6688  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1612.132731634,"data":"  epoch 40: loss 0.4019  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1823.011016923,"data":"  epoch 60: loss 0.1739  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2023.332560155,"data":"  epoch 79: loss 0.0969  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2023.336734021,"data":"  best checkpoint: epoch 79 (quickcheck_cell_acc 0.000)\n"}
+,{"stream_name":"stdout","time":2023.450546779,"data":"  [mamba/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=4x6 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2023.831191172,"data":"  [mamba/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2058.211415347,"data":"[mamba] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.045 shape_match_rate=0.083\n"}
+,{"stream_name":"stdout","time":2058.318965051,"data":"  [mamba/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=5x4 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2058.704035376,"data":"  [mamba/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2105.179250989,"data":"[mamba] heldout (compositional): exact_match=0.000 mean_cell_acc=0.034 shape_match_rate=0.070\n"}
+,{"stream_name":"stdout","time":2105.195412314,"data":"\n"}
+,{"stream_name":"stdout","time":2105.195439641,"data":"=== training hybrid (894,592 params) on 2400 examples ===\n"}
+,{"stream_name":"stdout","time":2139.595854659,"data":"  epoch 0: loss 30.7234  lr 2.50e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2350.690947099,"data":"  epoch 20: loss 0.5894  lr 1.00e-03  quickcheck_cell_acc 0.022\n"}
+,{"stream_name":"stdout","time":2560.777856799,"data":"  epoch 40: loss 0.2877  lr 1.00e-03  quickcheck_cell_acc 0.016\n"}
+,{"stream_name":"stdout","time":2771.292601445,"data":"  epoch 60: loss 0.1137  lr 1.00e-03  quickcheck_cell_acc 0.017\n"}
+,{"stream_name":"stdout","time":2970.162099849,"data":"  epoch 79: loss 0.0729  lr 1.00e-03  quickcheck_cell_acc 0.015\n"}
+,{"stream_name":"stdout","time":2970.162159655,"data":"  best checkpoint: epoch 20 (quickcheck_cell_acc 0.022)\n"}
+,{"stream_name":"stdout","time":2970.321568962,"data":"  [hybrid/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=7x6 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2970.5705305,"data":"  [hybrid/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=11x6 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2997.90479183,"data":"[hybrid] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.050 shape_match_rate=0.075\n"}
+,{"stream_name":"stdout","time":2997.958316645,"data":"  [hybrid/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=4x3 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":2998.233747405,"data":"  [hybrid/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=11x7 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":3039.81408984,"data":"[hybrid] heldout (compositional): exact_match=0.000 mean_cell_acc=0.069 shape_match_rate=0.105\n"}
+,{"stream_name":"stdout","time":3039.814344574,"data":"\n"}
+,{"stream_name":"stdout","time":3039.81437115,"data":"=== SUMMARY ===\n"}
+,{"stream_name":"stdout","time":3039.814377621,"data":"transformer: params=795,520 train_eval(exact=0.000 cell=0.309 shape=0.492) heldout(exact=0.000 cell=0.235 shape=0.380)\n"}
+,{"stream_name":"stdout","time":3039.814382799,"data":"mamba: params=848,256 train_eval(exact=0.000 cell=0.045 shape=0.083) heldout(exact=0.000 cell=0.034 shape=0.070)\n"}
+,{"stream_name":"stdout","time":3039.814388308,"data":"hybrid: params=894,592 train_eval(exact=0.000 cell=0.050 shape=0.075) heldout(exact=0.000 cell=0.069 shape=0.105)\n"}
+,{"stream_name":"stdout","time":3039.815602505,"data":"\n"}
+,{"stream_name":"stdout","time":3039.815618183,"data":"total time: 2953.3s\n"}
+,{"stream_name":"stderr","time":3043.469357727,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3043.469434372,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3043.72838859,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3043.728417401,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3044.393890279,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3045.754307044,"data":"[NbConvertApp] Writing 369935 bytes to __results__.html\n"}
+]

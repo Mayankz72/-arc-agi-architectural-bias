@@ -1,0 +1,44 @@
+[{"stream_name":"stdout","time":1.000484046,"data":"Installing mamba-ssm...\n"}
+,{"stream_name":"stdout","time":49.712038817,"data":"mamba-ssm installed OK\n"}
+,{"stream_name":"stdout","time":51.402967851,"data":"/kaggle/input contents: ['datasets']\n"}
+,{"stream_name":"stdout","time":51.412629424,"data":"Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared\n"}
+,{"stream_name":"stdout","time":77.346162711,"data":"Device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":77.463644361,"data":"built 2400 leave-one-out training examples\n"}
+,{"stream_name":"stdout","time":77.87649471,"data":"\n"}
+,{"stream_name":"stdout","time":77.876524856,"data":"=== config 'current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2': lr=0.001 warmup_frac=0.05 grad_clip=1.0 wd=0.01 (848,256 params, 6000 total steps) ===\n"}
+,{"stream_name":"stdout","time":125.413317566,"data":"  epoch 0: loss 43.5845  lr 2.50e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":335.20373208,"data":"  epoch 20: loss 0.6631  lr 1.00e-03  quickcheck_cell_acc 0.025\n"}
+,{"stream_name":"stdout","time":548.952438582,"data":"  epoch 40: loss 0.3960  lr 1.00e-03  quickcheck_cell_acc 0.034\n"}
+,{"stream_name":"stdout","time":761.785340761,"data":"  epoch 60: loss 0.1756  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":963.962891478,"data":"  epoch 79: loss 0.0952  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":963.962962459,"data":"  'current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2' best checkpoint: epoch 40 (quickcheck_cell_acc 0.034)\n"}
+,{"stream_name":"stdout","time":963.980461188,"data":"\n"}
+,{"stream_name":"stdout","time":963.980530858,"data":"=== config 'original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2': lr=0.0003 warmup_frac=0.0 grad_clip=None wd=0.01 (848,256 params, 6000 total steps) ===\n"}
+,{"stream_name":"stdout","time":1009.261783696,"data":"  epoch 0: loss 20.7895  lr 3.00e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1233.26356508,"data":"  epoch 20: loss 0.8401  lr 3.00e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1445.474541355,"data":"  epoch 40: loss 0.7174  lr 3.00e-04  quickcheck_cell_acc 0.017\n"}
+,{"stream_name":"stdout","time":1656.284891918,"data":"  epoch 60: loss 0.6499  lr 3.00e-04  quickcheck_cell_acc 0.019\n"}
+,{"stream_name":"stdout","time":1856.787994801,"data":"  epoch 79: loss 0.5507  lr 3.00e-04  quickcheck_cell_acc 0.019\n"}
+,{"stream_name":"stdout","time":1856.792658846,"data":"  'original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2' best checkpoint: epoch 79 (quickcheck_cell_acc 0.019)\n"}
+,{"stream_name":"stdout","time":1856.809489697,"data":"\n"}
+,{"stream_name":"stdout","time":1856.809515644,"data":"=== config 'no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0': lr=0.001 warmup_frac=0.05 grad_clip=1.0 wd=0.0 (848,256 params, 6000 total steps) ===\n"}
+,{"stream_name":"stdout","time":1902.310400275,"data":"  epoch 0: loss 43.5850  lr 2.50e-04  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2114.976777664,"data":"  epoch 20: loss 0.6607  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2327.426742958,"data":"  epoch 40: loss 0.3909  lr 1.00e-03  quickcheck_cell_acc 0.019\n"}
+,{"stream_name":"stdout","time":2540.340086671,"data":"  epoch 60: loss 0.1766  lr 1.00e-03  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2742.858299098,"data":"  epoch 79: loss 0.0970  lr 1.00e-03  quickcheck_cell_acc 0.015\n"}
+,{"stream_name":"stdout","time":2742.858362998,"data":"  'no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0' best checkpoint: epoch 40 (quickcheck_cell_acc 0.019)\n"}
+,{"stream_name":"stdout","time":2742.860664664,"data":"\n"}
+,{"stream_name":"stdout","time":2742.860684042,"data":"=== SUMMARY ===\n"}
+,{"stream_name":"stdout","time":2742.860687064,"data":"current (phase2b regime): lr=1e-3 warmup=0.05 clip=1.0 wd=1e-2: best quickcheck_cell_acc = 0.034\n"}
+,{"stream_name":"stdout","time":2742.860689641,"data":"original-pilot regime: lr=3e-4 no-warmup no-clip wd=1e-2: best quickcheck_cell_acc = 0.019\n"}
+,{"stream_name":"stdout","time":2742.860691986,"data":"no weight decay: lr=1e-3 warmup=0.05 clip=1.0 wd=0.0: best quickcheck_cell_acc = 0.019\n"}
+,{"stream_name":"stdout","time":2742.861103468,"data":"\n"}
+,{"stream_name":"stdout","time":2742.861110923,"data":"total time: 2665.5s\n"}
+,{"stream_name":"stderr","time":2746.688823896,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2746.688858933,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2746.974321407,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2746.974349479,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2747.638684993,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2749.015432875,"data":"[NbConvertApp] Writing 330189 bytes to __results__.html\n"}
+]

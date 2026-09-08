@@ -1,0 +1,65 @@
+[{"stream_name":"stdout","time":1.098657052,"data":"Installing mamba-ssm...\n"}
+,{"stream_name":"stdout","time":49.191714224,"data":"mamba-ssm installed OK\n"}
+,{"stream_name":"stdout","time":50.80408291,"data":"/kaggle/input contents: ['datasets']\n"}
+,{"stream_name":"stdout","time":50.808497579,"data":"Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared contents: ['arc_common', 'vendor', 'generator.py', 'data']\n"}
+,{"stream_name":"stdout","time":76.608188133,"data":"Device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":76.731594479,"data":"built 2400 leave-one-out training examples\n"}
+,{"stream_name":"stdout","time":76.77794005,"data":"reference (transformer, 4 layers): 1,057,664 params\n"}
+,{"stream_name":"stdout","time":77.533760192,"data":"mamba: 7 layers -\u003e 1,081,728 params (target 1,057,664)\n"}
+,{"stream_name":"stdout","time":78.018883415,"data":"hybrid: 5 layers -\u003e 1,011,328 params (target 1,057,664)\n"}
+,{"stream_name":"stdout","time":78.28260136,"data":"\n"}
+,{"stream_name":"stdout","time":78.282661012,"data":"=== training transformer (1,057,664 params) on 2400 examples ===\n"}
+,{"stream_name":"stdout","time":117.715745693,"data":"  epoch 0: loss 7.5928  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":495.959007574,"data":"  epoch 20: loss 1.1953  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":876.879262681,"data":"  epoch 40: loss 1.1546  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1254.448387693,"data":"  epoch 60: loss 1.1034  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1607.32374843,"data":"  epoch 79: loss 1.0298  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1607.327377702,"data":"  best checkpoint: epoch 79 (quickcheck_cell_acc 0.000)\n"}
+,{"stream_name":"stdout","time":1607.449473095,"data":"  [transformer/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=1x48 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":1607.53448954,"data":"  [transformer/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":1654.81460356,"data":"[transformer] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.000 shape_match_rate=0.000\n"}
+,{"stream_name":"stdout","time":1654.843235996,"data":"  [transformer/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=1x10 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":1654.921348037,"data":"  [transformer/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":1717.777537889,"data":"[transformer] heldout (compositional): exact_match=0.000 mean_cell_acc=0.000 shape_match_rate=0.000\n"}
+,{"stream_name":"stdout","time":1717.795920649,"data":"\n"}
+,{"stream_name":"stdout","time":1717.79594607,"data":"=== training mamba (1,081,728 params) on 2400 examples ===\n"}
+,{"stream_name":"stdout","time":1779.787446203,"data":"  epoch 0: loss 17.0218  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2107.874205173,"data":"  epoch 20: loss 0.8140  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2418.323023983,"data":"  epoch 40: loss 0.6888  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":2728.980055327,"data":"  epoch 60: loss 0.5945  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":3024.311394684,"data":"  epoch 79: loss 0.4701  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":3024.316569397,"data":"  best checkpoint: epoch 79 (quickcheck_cell_acc 0.023)\n"}
+,{"stream_name":"stdout","time":3024.467841354,"data":"  [mamba/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=5x5 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":3024.784450594,"data":"  [mamba/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=8x7 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":3060.938670654,"data":"[mamba] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.046 shape_match_rate=0.075\n"}
+,{"stream_name":"stdout","time":3061.060838641,"data":"  [mamba/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=6x3 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":3061.520615204,"data":"  [mamba/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=10x8 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":3129.61067068,"data":"[mamba] heldout (compositional): exact_match=0.000 mean_cell_acc=0.053 shape_match_rate=0.085\n"}
+,{"stream_name":"stdout","time":3129.626321571,"data":"\n"}
+,{"stream_name":"stdout","time":3129.626342106,"data":"=== training hybrid (1,011,328 params) on 2400 examples ===\n"}
+,{"stream_name":"stdout","time":3177.875810862,"data":"  epoch 0: loss 8.7168  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":3499.342717188,"data":"  epoch 20: loss 0.8173  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":3815.531920445,"data":"  epoch 40: loss 0.6792  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":4131.929470793,"data":"  epoch 60: loss 0.5680  quickcheck_cell_acc 0.023\n"}
+,{"stream_name":"stdout","time":4433.408175227,"data":"  epoch 79: loss 0.4334  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":4433.408242769,"data":"  best checkpoint: epoch 60 (quickcheck_cell_acc 0.023)\n"}
+,{"stream_name":"stdout","time":4433.513361198,"data":"  [hybrid/train_eval (in-distribution)] example rot90_swap34_000: gt_shape=6x3 pred_shape=4x6 cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":4433.723634906,"data":"  [hybrid/train_eval (in-distribution)] example rot90_swap34_001: gt_shape=8x6 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":4461.042735082,"data":"[hybrid] train_eval (in-distribution): exact_match=0.000 mean_cell_acc=0.045 shape_match_rate=0.075\n"}
+,{"stream_name":"stdout","time":4461.178281744,"data":"  [hybrid/heldout (compositional)] example rot90_swap12_000: gt_shape=3x3 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":4461.306440384,"data":"  [hybrid/heldout (compositional)] example rot90_swap12_001: gt_shape=7x3 pred_shape=invalid cell_acc=0.00\n"}
+,{"stream_name":"stdout","time":4503.283617083,"data":"[hybrid] heldout (compositional): exact_match=0.000 mean_cell_acc=0.045 shape_match_rate=0.070\n"}
+,{"stream_name":"stdout","time":4503.283685023,"data":"\n"}
+,{"stream_name":"stdout","time":4503.283710207,"data":"=== SUMMARY ===\n"}
+,{"stream_name":"stdout","time":4503.283716037,"data":"transformer: params=1,057,664 train_eval(exact=0.000 cell=0.000 shape=0.000) heldout(exact=0.000 cell=0.000 shape=0.000)\n"}
+,{"stream_name":"stdout","time":4503.283721855,"data":"mamba: params=1,081,728 train_eval(exact=0.000 cell=0.046 shape=0.075) heldout(exact=0.000 cell=0.053 shape=0.085)\n"}
+,{"stream_name":"stdout","time":4503.283726415,"data":"hybrid: params=1,011,328 train_eval(exact=0.000 cell=0.045 shape=0.075) heldout(exact=0.000 cell=0.045 shape=0.070)\n"}
+,{"stream_name":"stdout","time":4503.284930762,"data":"\n"}
+,{"stream_name":"stdout","time":4503.284947913,"data":"total time: 4426.7s\n"}
+,{"stream_name":"stderr","time":4506.684942183,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4506.685026333,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4506.941379764,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4506.941408576,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4507.590116234,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4508.890626469,"data":"[NbConvertApp] Writing 356099 bytes to __results__.html\n"}
+]

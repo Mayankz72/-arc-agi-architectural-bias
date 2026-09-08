@@ -1,0 +1,16 @@
+{
+  "id": "kojijhjughio/arc-agi-2-transformer-debug2",
+  "title": "ARC-AGI-2 Transformer Debug2",
+  "code_file": "transformer_debug2.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["kojijhjughio/arc-agi-inductive-bias-shared"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

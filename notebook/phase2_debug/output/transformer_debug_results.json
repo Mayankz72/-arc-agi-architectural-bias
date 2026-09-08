@@ -1,0 +1,1 @@
+{"baseline (no warmup, no clip, lr=3e-4)": 0.0, "warmup+clip, lr=3e-4": 0.0, "warmup+clip, lr=1e-3": 0.0}

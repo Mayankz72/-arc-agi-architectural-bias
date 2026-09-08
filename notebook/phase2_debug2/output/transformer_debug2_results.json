@@ -1,0 +1,1 @@
+{"abs-pos, teacher-forcing (repeat of prior best)": 0.0, "RoPE, teacher-forcing": 0.20428193499622072, "abs-pos, scheduled-sampling (ramp to p=0.5)": 0.0, "RoPE, scheduled-sampling (ramp to p=0.5)": 0.08499622071050643}

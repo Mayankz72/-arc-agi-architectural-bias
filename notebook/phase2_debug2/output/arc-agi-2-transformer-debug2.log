@@ -1,0 +1,51 @@
+[{"stream_name":"stdout","time":6.626874523,"data":"/kaggle/input contents: ['datasets']\n"}
+,{"stream_name":"stdout","time":6.725275562,"data":"Using DATASET_ROOT: /kaggle/input/datasets/kojijhjughio/arc-agi-inductive-bias-shared\n"}
+,{"stream_name":"stdout","time":7.190269436,"data":"Device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":7.379788178,"data":"built 2400 leave-one-out training examples\n"}
+,{"stream_name":"stdout","time":13.141641623,"data":"\n"}
+,{"stream_name":"stdout","time":13.14167718,"data":"=== config 'abs-pos, teacher-forcing (repeat of prior best)': use_rope=False scheduled_sampling=False (1,057,664 params, 3000 total steps) ===\n"}
+,{"stream_name":"stdout","time":54.185372456,"data":"  epoch 0: loss 18.2731  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":247.830924501,"data":"  epoch 10: loss 1.2064  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":436.606931617,"data":"  epoch 20: loss 1.1263  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":618.042375627,"data":"  epoch 30: loss 1.0273  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":779.724728133,"data":"  epoch 39: loss 0.9039  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":779.72856068,"data":"  'abs-pos, teacher-forcing (repeat of prior best)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)\n"}
+,{"stream_name":"stdout","time":779.789760373,"data":"\n"}
+,{"stream_name":"stdout","time":779.78978691,"data":"=== config 'RoPE, teacher-forcing': use_rope=True scheduled_sampling=False (795,520 params, 3000 total steps) ===\n"}
+,{"stream_name":"stdout","time":815.612150496,"data":"  epoch 0: loss 19.6436  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":957.788009913,"data":"  epoch 10: loss 0.8488  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1086.63648861,"data":"  epoch 20: loss 0.7404  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1212.718353557,"data":"  epoch 30: loss 0.6692  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.041\n"}
+,{"stream_name":"stdout","time":1326.080414779,"data":"  epoch 39: loss 0.6242  lr 1.00e-03  ss_p 0.00  quickcheck_cell_acc 0.204\n"}
+,{"stream_name":"stdout","time":1326.084224966,"data":"  'RoPE, teacher-forcing' best checkpoint: epoch 39 (quickcheck_cell_acc 0.204)\n"}
+,{"stream_name":"stdout","time":1326.100422716,"data":"\n"}
+,{"stream_name":"stdout","time":1326.100440282,"data":"=== config 'abs-pos, scheduled-sampling (ramp to p=0.5)': use_rope=False scheduled_sampling=True (1,057,664 params, 3000 total steps) ===\n"}
+,{"stream_name":"stdout","time":1370.504388052,"data":"  epoch 0: loss 18.2684  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1609.810183321,"data":"  epoch 10: loss 1.2327  lr 1.00e-03  ss_p 0.13  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":1847.116150709,"data":"  epoch 20: loss 1.1939  lr 1.00e-03  ss_p 0.26  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2074.886380198,"data":"  epoch 30: loss 1.1545  lr 1.00e-03  ss_p 0.38  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2277.116127533,"data":"  epoch 39: loss 1.0938  lr 1.00e-03  ss_p 0.50  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2277.119989896,"data":"  'abs-pos, scheduled-sampling (ramp to p=0.5)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.000)\n"}
+,{"stream_name":"stdout","time":2277.137418361,"data":"\n"}
+,{"stream_name":"stdout","time":2277.137437831,"data":"=== config 'RoPE, scheduled-sampling (ramp to p=0.5)': use_rope=True scheduled_sampling=True (795,520 params, 3000 total steps) ===\n"}
+,{"stream_name":"stdout","time":2315.452321475,"data":"  epoch 0: loss 19.6295  lr 5.00e-04  ss_p 0.00  quickcheck_cell_acc 0.000\n"}
+,{"stream_name":"stdout","time":2485.197696284,"data":"  epoch 10: loss 0.9766  lr 1.00e-03  ss_p 0.13  quickcheck_cell_acc 0.020\n"}
+,{"stream_name":"stdout","time":2645.744451324,"data":"  epoch 20: loss 0.8703  lr 1.00e-03  ss_p 0.26  quickcheck_cell_acc 0.059\n"}
+,{"stream_name":"stdout","time":2806.015665821,"data":"  epoch 30: loss 0.8521  lr 1.00e-03  ss_p 0.38  quickcheck_cell_acc 0.082\n"}
+,{"stream_name":"stdout","time":2950.091921031,"data":"  epoch 39: loss 0.8341  lr 1.00e-03  ss_p 0.50  quickcheck_cell_acc 0.085\n"}
+,{"stream_name":"stdout","time":2950.095446302,"data":"  'RoPE, scheduled-sampling (ramp to p=0.5)' best checkpoint: epoch 39 (quickcheck_cell_acc 0.085)\n"}
+,{"stream_name":"stdout","time":2950.097730698,"data":"\n"}
+,{"stream_name":"stdout","time":2950.097745915,"data":"=== SUMMARY ===\n"}
+,{"stream_name":"stdout","time":2950.097751023,"data":"abs-pos, teacher-forcing (repeat of prior best): best quickcheck_cell_acc = 0.000\n"}
+,{"stream_name":"stdout","time":2950.097757853,"data":"RoPE, teacher-forcing: best quickcheck_cell_acc = 0.204\n"}
+,{"stream_name":"stdout","time":2950.097762474,"data":"abs-pos, scheduled-sampling (ramp to p=0.5): best quickcheck_cell_acc = 0.000\n"}
+,{"stream_name":"stdout","time":2950.09776863,"data":"RoPE, scheduled-sampling (ramp to p=0.5): best quickcheck_cell_acc = 0.085\n"}
+,{"stream_name":"stdout","time":2950.098306323,"data":"\n"}
+,{"stream_name":"stdout","time":2950.098317706,"data":"total time: 2942.9s\n"}
+,{"stream_name":"stderr","time":2954.805039247,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2954.806438384,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2955.104522578,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2955.104550984,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2955.800095839,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2957.15105647,"data":"[NbConvertApp] Writing 350448 bytes to __results__.html\n"}
+]
