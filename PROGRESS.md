@@ -281,9 +281,15 @@ Checked the submission's score: **0.00 exact-match**, "Succeeded" status. This i
 
 Wrote `PAPER.md`: a full draft in the organizer's required structure (Abstract, Intro, Prior Work, Approach, Results, Conclusion, Reproducibility), pulling every claim and number directly from this log and `ROADMAP.md` -- no new claims introduced. Caught and fixed one real issue while writing it: the abstract initially attributed specific (fabricated, never-verified) author names to the NSA paper -- corrected to cite by arXiv ID only, consistent with how every other paper in this project is cited (verified authors only for Kallini et al., confirmed via WebSearch in an earlier session; everything else cited by nickname + arXiv ID without asserting unconfirmed names). Also fixed a section cross-reference error (pointed at a nonexistent "Section 5.3").
 
+### 2026-09-08 — Repo prepared for open-sourcing (local half done, push pending)
+
+Initialized git, wrote `.gitignore` (excludes the real ARC-AGI-2 competition data for redistribution-licensing safety, `__pycache__`, `.claude/`, the `kaggle_dataset/` packaging mirror, and the empty `notebook_filetest/`), a CC BY 4.0 `LICENSE`, and a `README.md`. Found and fixed a real issue before committing: `vendor/arc-dsl` had its own nested `.git` directory (from however it was originally obtained), which git was about to silently record as an empty embedded-repo reference instead of tracking its actual files -- anyone cloning the repo would have gotten an empty `vendor/arc-dsl/` directory. Removed the nested `.git` so its files are tracked normally. Scanned all staged file contents for secrets/credentials before committing (clean -- the one hit was a documentation sentence *mentioning* `kaggle.json` exists locally, not the file or its contents). Made the initial commit (88 files).
+
+**Blocked on the actual push:** `gh` (GitHub CLI) isn't installed and I don't have push credentials for the user's GitHub account, so the remote repo creation + push needs the user to either create an empty GitHub repo and share the URL, or push it themselves.
+
 ## Next up
-- [ ] Fill in the `[repository link]` placeholders in `PAPER.md` once the repo is open-sourced.
-- [ ] Open-source the repo (CC BY 4.0) -- required for prize eligibility, not yet done, and blocks the repository-link placeholders above.
+- [ ] Push the local repo to a GitHub remote (blocked on the user creating the repo / providing a URL, or pushing themselves -- see entry above).
+- [ ] Fill in the `[repository link]` placeholders in `PAPER.md` once the repo has a public URL.
 - [ ] Proofread `PAPER.md` against the actual ARC Prize Paper Track submission format/length requirements (re-verify live closer to submission, per this project's own standing practice of not trusting time-sensitive facts once time has passed) and submit it there.
 - [ ] Rerun `notebook/submission/submission.py` with the MAX_SEQ_LEN margin fix for a cleaner second submission (up to 2 submissions count toward the final leaderboard score; not strictly required since the current one is already valid, but removes a known, already-handled failure mode).
 - [ ] Decide on and lock in the Final Submission selection once both submission slots are used (respect the 1/day limit, don't attempt this on the deadline day itself; the real window for this is Oct 25-31 per the roadmap, well after this early first submission).
