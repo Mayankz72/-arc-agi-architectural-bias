@@ -2,7 +2,7 @@
 
 **Author:** Mayank Mishra
 **Track:** ARC Prize 2026 Paper Track
-**Code:** [repository link] · **Kaggle submission:** `kojijhjughio/arc-agi-2-submission`
+**Code:** https://github.com/Mayankz72/-arc-agi-architectural-bias · **Kaggle submission:** `kojijhjughio/arc-agi-2-submission`
 
 ## Abstract
 
@@ -107,4 +107,4 @@ Holding representation, training regime, verifier, and parameter count fixed, we
 
 ## Reproducibility
 
-All code, data generators, trained-model configurations, and full experimental logs are available at [repository link], including the local unit tests (`test_harness.py`, `test_phase3_harness.py`, `test_phase4_kvcache.py`) that verify the tokenizer, scoring harness, symbolic verifier, and KV-cache against reference implementations before any Kaggle GPU time was spent. The Kaggle submission notebook (`kojijhjughio/arc-agi-2-submission`) reproduces Section 4.5 end-to-end with no internet access.
+All code, data generators, trained-model configurations, and full experimental logs are available at https://github.com/Mayankz72/-arc-agi-architectural-bias, including the local unit tests (`test_harness.py`, `test_phase3_harness.py`, `test_phase4_kvcache.py`) that verify the tokenizer, scoring harness, symbolic verifier, and KV-cache against reference implementations before any Kaggle GPU time was spent. The Kaggle submission notebook (`kojijhjughio/arc-agi-2-submission`) reproduces Section 4.5 end-to-end with no internet access.
