@@ -287,23 +287,17 @@ Initialized git, wrote `.gitignore` (excludes the real ARC-AGI-2 competition dat
 
 **Blocked on the actual push:** `gh` (GitHub CLI) isn't installed and I don't have push credentials for the user's GitHub account, so the remote repo creation + push needs the user to either create an empty GitHub repo and share the URL, or push it themselves.
 
+### 2026-09-08 — Repo pushed to GitHub, PAPER.md links filled in
+
+User created https://github.com/Mayankz72/-arc-agi-architectural-bias and provided the URL. First push attempt failed (GitHub's own repo-creation flow had auto-generated a trivial 1-line `README.md` init commit, diverging from local history); resolved by merging with `--allow-unrelated-histories` and keeping our own comprehensive README over GitHub's placeholder, then pushed cleanly. Filled in both `[repository link]` placeholders in `PAPER.md` with the real URL and pushed that too. **Repo is public and fully in sync with local; open-sourcing (CC BY 4.0) is done.**
+
 ## Next up
-- [ ] Push the local repo to a GitHub remote (blocked on the user creating the repo / providing a URL, or pushing themselves -- see entry above).
-- [ ] Fill in the `[repository link]` placeholders in `PAPER.md` once the repo has a public URL.
-- [ ] Proofread `PAPER.md` against the actual ARC Prize Paper Track submission format/length requirements (re-verify live closer to submission, per this project's own standing practice of not trusting time-sensitive facts once time has passed) and submit it there.
-- [ ] Rerun `notebook/submission/submission.py` with the MAX_SEQ_LEN margin fix for a cleaner second submission (up to 2 submissions count toward the final leaderboard score; not strictly required since the current one is already valid, but removes a known, already-handled failure mode).
-- [ ] Decide on and lock in the Final Submission selection once both submission slots are used (respect the 1/day limit, don't attempt this on the deadline day itself; the real window for this is Oct 25-31 per the roadmap, well after this early first submission).
-- [ ] Optional, lower priority: hybrid's own hyperparameter sweep (still deprioritized-but-not-dropped from Phase 2c) -- unlikely to change the qualitative story at this point given how consistent the "Mamba/hybrid haven't learned enough" pattern has been across Phase 2b, 2c, 4a, and 4b.
-- [ ] Optional: a longer (>40 epoch) matched-budget real-ARC-AGI-2 rerun if the paper wants a sharper real-data margin than Phase 4a's 40-epoch numbers give -- not required, current numbers are honestly reportable as-is.
-- [ ] Phase 6-7: final submission, paper writeup (see ROADMAP.md) -- not yet started.
-- [x] Phase 3 Kaggle run — complete, see results entry above.
-- [ ] Decide whether to test the TTA-hurts-generalization hypothesis (Finding 2 from Phase 3) by adding D4 rotation/reflection augmentation to training data and re-running TTA, or just report it as an honest negative result.
-- [x] Phase 4a: real ARC-AGI-2 public eval set accuracy — done 2026-09-07 (see results entry above), but the Transformer's result there is ambiguous (undertrained, most likely) pending the longer follow-up run above.
-- [x] Isolate exposure-bias vs. positional-encoding explanation — resolved: RoPE fixes it, scheduled sampling doesn't (see 2026-09-06 results entry above)
-- [x] Re-run Phase 2 with RoPE-fixed Transformer — done, Phase 2b: Transformer now dominates Mamba/hybrid 6-7x, and shows the project's first interpretable train_eval-vs-heldout gap (see 2026-09-06 results entry above)
-- [x] Phase 2b replication run 2 (seed 1) — confirmed: Transformer (RoPE) beats Mamba/hybrid ~4-6x in both seeds, and its train_eval-vs-heldout gap replicates at consistent magnitude (~23-31%). Now a robust finding, not preliminary (see 2026-09-06 results entry above)
-- [x] Tune Mamba's own hyperparameters — resolved: the current shared regime already wins a 3-way sweep (see 2026-09-06 results entry above), so Mamba's weak scores are not a training-regime artifact. Phase 2b's numbers stand; no re-run needed.
-- [ ] (Lower priority now that Mamba's sweep confirmed the shared regime isn't the issue) Optionally give hybrid the same sweep for full completeness before Phase 4
-- [x] Read the four core papers in full (Mission: Impossible Language Models, NSA, "ARC Is a Vision Problem!", "ARC-AGI Without Pretraining") — done 2026-09-07, caught and fixed a factual error in ROADMAP's NSA summary along the way (see entry above)
-- [x] Write the one-paragraph hypothesis statement for the paper's Abstract — done 2026-09-07, see `ROADMAP.md` section 4.1
-- [x] Phase 3: add the NSA-style neuro-symbolic proposer+verifier layer — code complete, locally validated, and run on Kaggle 2026-09-07 (see results entry above)
+
+Everything through Phase 5 (working Kaggle submission) and repo open-sourcing is done -- see the dated entries above for the full history. What's actually still open:
+
+- [ ] Proofread `PAPER.md` against the actual ARC Prize Paper Track submission format/length requirements (re-verify live closer to submission, since competition details can change) and submit it there.
+- [ ] Decide on and lock in the Final Submission selection once both Kaggle submission slots are used (respect the 1/day limit, don't attempt this on the deadline day itself -- the real window is Oct 25-31 per the roadmap, well after this early first submission).
+- [ ] Optional: rerun `notebook/submission/submission.py` with the `MAX_SEQ_LEN` margin fix for a cleaner second submission -- not required, the current one is already valid.
+- [ ] Optional, low priority: hybrid's own hyperparameter sweep -- unlikely to change the qualitative story given how consistent the "Mamba/hybrid haven't learned enough" pattern has been across every phase.
+- [ ] Optional: a longer (>40 epoch) matched-budget real-ARC-AGI-2 rerun for a sharper real-data margin -- not required, current numbers are honestly reportable as-is.
+- [ ] Optional: test whether training-time D4 rotation/reflection augmentation fixes the TTA-hurts-generalization finding from Phase 3 (Finding 2) -- interesting follow-up, not required for the paper, which already reports it honestly as a negative result.
